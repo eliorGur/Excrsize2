@@ -7,9 +7,10 @@ export default class CCColor extends Component{
     };
 
     chngColor = (newColor)=>{
-        console.log(newColor); //בדיקה שמגיע לפונקציה
+        console.log(newColor); //.בדיקה שמגיע לפונקציה
         this.setState({color: newColor});
     }
+
 
     render(){
         return(
