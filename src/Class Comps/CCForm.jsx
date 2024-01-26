@@ -22,29 +22,29 @@ export default class CCForm extends Component {
         const gradeValue = parseInt(e.target.value); //שמירת ערך השדה שהוזן לתוך משתנה שיכיל את הציון
         if (gradeValue > 555) {
             this.setState({ passedGrade: 'yes' });
-        } 
-        else if(gradeValue <= 555) {
+        }
+        else if (gradeValue <= 555) {
             this.setState({ passedGrade: 'no' });
         }
     }
 
     render() {
         return (
-            <div style={{ textAlign: "left" }}>
+            <div style={{ border: 'solid black 2px', padding: 20, margin: 20, textAlign: "left" }}>
                 <form>
                     {this.state.focusedField === 'surName' && (<p style={{ background: 'red' }}>Please fill in a surname </p>)}
                     <label>
-                        Surname: <input onFocus={() => this.focusField('surName')} onBlur={this.noFocus} type="text" /> <br />
+                        Surname: <input onFocus={() => this.focusField('surName')} onBlur={this.noFocus} type="text" /> <br /><br />
                     </label>
 
                     {this.state.focusedField === 'firstName' && (<p style={{ background: 'red' }}>Please fill in a first name </p>)}
                     <label>
-                        First name: <input onFocus={() => this.focusField('firstName')} onBlur={this.noFocus} type="text" /> <br />
+                        First name: <input onFocus={() => this.focusField('firstName')} onBlur={this.noFocus} type="text" /> <br /><br />
                     </label>
 
                     {this.state.focusedField === 'grade' && (<p style={{ background: 'red' }}>Please fill in a grade </p>)}
                     <label>
-                        Grade: <input onFocus={() => this.focusField('grade')} onBlur={this.noFocusGrade} type="text" />
+                        Psyco grade: <input onFocus={() => this.focusField('grade')} onBlur={this.noFocusGrade} type="text" />
                     </label>
 
                     {this.state.passedGrade === 'yes' && (<p>Congratulations! You can be accepted for studies</p>)}

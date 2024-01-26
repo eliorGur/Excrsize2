@@ -25,7 +25,7 @@ export default class CCTable extends Component {
                 height: 100
             }}
             >
-                <tbody onClick={this.widthChng} onDoubleClick={this.widthBack}>
+               <tbody onClick={this.widthChng} onDoubleClick={this.widthBack}>
                     <tr>
                         <td></td>
                         <td></td>
